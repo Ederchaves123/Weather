@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>DncWeather</title>
+    <style>
+        body {
+            font-family: "Inter";
+        }
+
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: -20px;
+            margin-bottom: -20px;
+            padding-left: 5px;
+        }
+
+        .headerend {
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .headerend a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .headerend a:hover {
+            text-decoration: underline;
+        }
+
+        .backgroundmain {
+            background-color: #F2F2F2;
+        }
+
+        .anotherpadding {
+            padding-top: 6rem;
+            padding-right: 25px;
+        }
+
+        .cloud {
+            width: 18%;
+            padding-bottom: 100px;
+        }
+
+        .sizetitle {
+            font-size: 45px;
+            font-weight: 1000;
+            margin-bottom: 180px;
+        }
+
+        .boxinput {
+            background-color: #ffffff;
+            width: 60%;
+            border-radius: 5px;
+            padding: 0px 100px;
+            margin-bottom: 400px;
+        }
+
+        .firstp {
+            margin-top: 150px !important;
+        }
+
+        .paddinginput {
+            font-size: 25px;
+            font-weight: 500;
+            margin-top: 30px;
+        }
+
+        input {
+            background: #F2F2F2;
+            border-radius: 10px;
+            border: none;
+            height: 60px;
+            margin: 10px 0;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            background-color: #0C70F2;
+            color: #F2F2F2;
+            border-radius: 10px;
+            border: none;
+            margin: 100px 0px 50px 0px;
+            width: 98%;
+        }
+
+        button a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: blue;
+            color: rgb(239, 214, 106);
+            box-shadow: 4px 8px rgba(9, 89, 248, 0.1);
+        }
+
+        .margintextinput {
+            margin-left: 0px;
+        }
+
+        .inputflex {
+            display: flex;
+        }
+
+        ::placeholder {
+            padding-left: 20px;
+            font-size: 20px;
+            color: #393939;
+            opacity: 0.5;
+        }
+
+        .textcep {
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        .ceppoint {
+            width: 12%;
+        }
+
+        .localization {
+            width: 70%;
+            margin: auto;
+            margin-bottom: 200px;
+            font-size: 25px;
+        }
+
+        .localizationbottom {
+            margin-bottom: 100px;
+        }
+
+        .clouldimg {
+            width: 14%;
+            padding-left: 25px;
+        }
+
+        .celcius {
+            width: 70%;
+            height: 60px;
+            font-size: 25px;
+            background-color: #ffffff;
+            margin: auto;
+            border-radius: 25px;
+            border: 1px solid #0C70F2;
+            padding: 10px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        .fontterm {
+            cursor: pointer;
+        }
+
+        @media (min-width: 0px) and (max-width: 650px) {
+
+            .sizetitle {
+                font-size: 18px !important;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .headerend {
+                padding-left: 0px;
+                font-size: 10px;
+            }
+
+            .anotherpadding {
+                margin-left: 10px;
+            }
+
+            .cloud {
+                width: 20%;
+                padding-bottom: 80px;
+            }
+
+            .boxinput {
+                width: 90%;
+                padding: 0px 5px;
+                margin-bottom: 50px;
+            }
+
+            .firstp {
+                margin-top: 50px;
+            }
+
+            .paddinginput {
+                padding-left: 5px;
+                font-size: 14px;
+                white-space: nowrap;
+                font-weight: 800;
+            }
+
+            input {
+                height: 40px;
+                width: 100%;
+            }
+
+            ::placeholder {
+                font-size: 15px;
+            }
+
+            button {
+                margin-top: 5px;
+                width: 80%;
+                font-size: 20px;
+            }
+
+            .textcep {
+                font-size: 19px;
+                font-weight: 800;
+            }
+
+            .ceppoint {
+                width: 12%;
+            }
+
+            .localization {
+                width: 95%;
+                font-size: 12px;
+                margin: auto;
+            }
+
+            .localizationbottom {
+                margin-bottom: 50px;
+            }
+
+            .clouldimg {
+                width: 15%;
+                padding-left: 5px;
+            }
+
+            .celcius {
+                width: 95%;
+                font-size: 15px;
+                font-weight: bolder;
+                padding-top: 20px;
+            }
+
+            .fontterm {
+                font-size: 10px;
+            }
+
+        }
+
+        @media (min-width: 651px) and (max-width: 1200px) {
+
+            .sizetitle {
+                font-size: 30px !important;
+            }
+
+            .logo {
+                font-size: 30px;
+            }
+
+            .headerend {
+                font-size: 20px;
+            }
+
+            .anotherpadding {
+                margin-left: 10px;
+            }
+
+            .cloud {
+                width: 15%;
+                padding-bottom: 80px;
+            }
+
+            .boxinput {
+                width: 90%;
+                padding: 0px 5px;
+                margin-bottom: 50px;
+            }
+
+            .firstp {
+                margin-top: 50px;
+            }
+
+            .paddinginput {
+                padding-left: 15px;
+                font-size: 22px;
+                white-space: nowrap;
+                font-weight: 800;
+            }
+
+            input {
+                height: 50px;
+                width: 97%;
+            }
+
+            ::placeholder {
+                font-size: 20px;
+            }
+
+            button {
+                margin-top: 5px;
+                width: 90%;
+            }
+
+            .textcep {
+                font-size: 25px;
+                font-weight: 800;
+            }
+
+            .ceppoint {
+                width: 12%;
+            }
+
+            .localization {
+                width: 95%;
+                font-size: 18px;
+                margin: auto;
+            }
+
+            .localizationbottom {
+                margin-bottom: 50px;
+            }
+
+            .clouldimg {
+                width: 15%;
+                padding-left: 5px;
+            }
+
+            .celcius {
+                width: 95%;
+                font-size: 22px;
+                font-weight: bolder;
+                padding-top: 15px;
+            }
+
+            .fontterm {
+                font-size: 20px;
+            }
+}
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid text-center p-0 m-0">
+        <div class="row bg-primary w-100 mx-0 text-white fw-bold">
+            <div class="col-12 d-flex justify-content-between align-items-center flex-nowrap py-3 mt-3 mb-3">
+                <div class="ps-3 logo fw-bold phonelogo">
+                    DncWeather
+                </div>
+                <div class="d-flex justify-content-end ">
+                    <div class="me-5 headerend"><a href="#andress">Endereços</a></div>
+                    <div class="me-5 headerend"><a href="#weather">Previsão do tempo</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center p-0 backgroundmain">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <div class="anotherpadding text-start sizetitle">
+                    Descubra Mais com Precisão: <br> Previsões do Tempo e endereços <br> em tempo real.
+                </div>
+                <img src="weather.svg" class="img-fluid cloud">
+            </div>
+        </div>
+
+        <div class="boxinput mx-auto rounded-5 fs-1">
+
+            <div class="row mb-3">
+                <div class="col-12 text-start">
+                    <p class="paddinginput margintextinput mb-0 firstp">Primeiro Nome:</p>
+                    <input id="name" type="text" placeholder="Insira seu primeiro nome:">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 text-start">
+                    <p class="paddinginput margintextinput mb-0">E-mail:</p>
+                    <input id="email" type="text" placeholder="Insira seu e-mail:">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 text-start">
+                    <p class="paddinginput margintextinput mb-0">Digite o CEP:</p>
+                    <input id="cep" type="text" placeholder="Insira o CEP:">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 text-start">
+                    <p class="paddinginput mb-0 textdouble">Digite a latitude e longitude para saber a previsão:</p>
+                    <div class="d-flex justify-content-between">
+                        <input id="latitude" class="inputflex small-input" type="text" placeholder="latitude">
+                        <input id="longitude" class="inputflex small-input ms-2" type="text" placeholder="longitude">
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="getData()"><a href="#andress">Acessar</a></button>
+        </div>
+
+        <div class="container-fluid text-center p-0 backgroundmain">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div class="textcep">
+                        Resultado da busca por CEP:
+                    </div>
+                    <img class="ceppoint" src="resultadoporcep.svg">
+                </div>
+            </div>
+
+            <div id="andress" class="localization fw-bold">
+                <div class="container-fluid bg-primary rounded-top-5 pt-3 pb-3 text-white">
+                    <div class="row">
+                        <div class="col">
+                            Logradouro/nome
+                        </div>
+                        <div class="col">
+                            Bairro/Distrito
+                        </div>
+                        <div class="col-6">
+                            Localidade/UF
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid bg-white rounded-bottom-5 pt-4 pb-4 localizationbottom">
+                    <div class="row">
+                        <div id="logradouro" class="col">
+                            
+                        </div>
+                        <div id="bairro" class="col">
+                            
+                        </div>
+                        <div id="localidade" class="col-6">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid text-center p-0 backgroundmain mb-3">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <div class="textcep">
+                            Previsão do tempo na região:
+                        </div>
+                        <img class="clouldimg" src="clould.svg">
+                    </div>
+                </div>
+            </div>
+            <div id="weather" class="celcius">
+                Previsão de tempo de acordo com a região: ""° C
+            </div>
+            <div class="container-fluid text-center p-0 m-0">
+                <div class="row bg-primary w-100 mx-0 text-white fw-bold">
+                    <div class="d-flex justify-content-end p-3">
+                        <div class="me-1 fontterm">Termos de Uso</div>
+                        <p class="fontterm">|</p>
+                        <div class="ms-1 fontterm">Política de Privacidade</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function getData() {
+            const cep = document.getElementById('cep').value;
+            const lat = document.getElementById('latitude').value;
+            const lon = document.getElementById('longitude').value;
+
+            try {
+                const cepResponse = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                const cepData = await cepResponse.json();
+
+                if (cepData.erro) {
+                    alert('CEP não encontrado.');
+                    console.error('CEP não encontrado.');
+                } else {
+                    document.getElementById('logradouro').textContent = cepData.logradouro;
+                    document.getElementById('bairro').textContent = cepData.bairro;
+                    document.getElementById('localidade').textContent = `${cepData.localidade}/${cepData.uf}`;
+
+                    console.log('Informações do endereço:');
+                    console.log(`CEP: ${cepData.cep}`);
+                    console.log(`Logradouro: ${cepData.logradouro}`);
+                    console.log(`Complemento: ${cepData.complemento}`);
+                    console.log(`Bairro: ${cepData.bairro}`);
+                    console.log(`Localidade/UF: ${cepData.localidade}/${cepData.uf}`);
+
+                    const apiKey = '97d023ed9d412bd0cfcde578dbe2610a';
+                    const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
+                    const weatherData = await weatherResponse.json();
+
+                    if (weatherData.cod !== 200) {
+                        alert('Erro ao buscar a previsão do tempo.');
+                        console.error('Erro ao buscar a previsão do tempo.');
+                    } else {
+                        document.getElementById('weather').textContent = `Previsão de tempo de acordo com a região: ${weatherData.main.temp}° C`;
+
+                        console.log('Informações da previsão do tempo:');
+                        console.log(`Temperatura: ${weatherData.main.temp}° C`);
+                        console.log(`Clima: ${weatherData.weather[0].description}`);
+                    }
+                }
+            } catch (error) {
+                alert('Erro ao buscar os dados. Verifique o CEP, latitude e longitude e tente novamente.');
+                console.error('Erro ao buscar os dados. Verifique o CEP, latitude e longitude e tente novamente.');
+                console.error(error);
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
